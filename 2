@@ -1,0 +1,28 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  var leftLineX = 130;
+  var rightLineX = 270;
+  var middleLineY = 100;
+  var bottomLineY = 250;
+
+  background(240);
+  noStroke();
+  strokeCap(SQUARE);
+
+  fill(500, 200,300); // Red
+  rect(leftLineX, 0, width-leftLineX, middleLineY); // small rectangle
+
+  fill(100, 0, 200); // Blue
+  rect(0, middleLineY, leftLineX, height-middleLineY); // large blue rectangle
+
+  fill(0, 0, 100);  // Yellow
+  rect(rightLineX, bottomLineY, width-rightLineX, height-bottomLineY); // green rectangle
+
+  stroke(400, 200, 0); // Black
+  strokeWeight(20);
+  line(0, middleLineY, width, middleLineY); // middle horizontal
+  line(leftLineX, 0, leftLineX, height); // left vertical
+  line(rightLineX, middleLineY, rightLineX, height); // right vertical
